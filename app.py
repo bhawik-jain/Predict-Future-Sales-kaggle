@@ -9,10 +9,10 @@ app = Flask(__name__)
 
 with open('XGBR_pkl', 'rb') as files:
     model = pickle.load(files)
-data = pickle.load(open('data_for_model.gzip', 'rb'))
+#data = pickle.load(open('data_for_model.pkl.gz', 'rb'))
 
-#with gzip.open('data_for_model.pkl.gz', 'rb') as files:
-#    data = pickle.load(files)
+with gzip.open('data_for_model.pkl.gz', 'rb') as files:
+    data = pickle.load(files)
 #data = pickle.load(open('data_for_model.7z', 'rb'))
 #data = pd.read_pickle('data_for_model.7z')
 
